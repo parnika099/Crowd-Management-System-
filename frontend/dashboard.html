@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrowdGuard - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1>🛡️ CrowdGuard Dashboard</h1>
+            </div>
+            <div class="header-right">
+                <span id="user-info"></span>
+                <a href="zones.html" class="btn-secondary">Manage Zones</a>
+                <a href="users.html" class="btn-secondary">Manage Users</a>
+                <button onclick="logout()" class="btn-secondary">Logout</button>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <div class="dashboard-content">
+            <!-- Stats Summary -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Total Zones</h3>
+                    <p id="total-zones" class="stat-number">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Alerts</h3>
+                    <p id="active-alerts" class="stat-number">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>High Density Zones</h3>
+                    <p id="high-density-zones" class="stat-number">0</p>
+                </div>
+            </div>
+            
+            <!-- Zones Section -->
+            <section class="section">
+                <h2>Zone Status</h2>
+                <div id="zones-container" class="zones-grid"></div>
+            </section>
+            
+            <!-- Alerts Section -->
+            <section class="section">
+                <h2>Active Alerts</h2>
+                <div id="alerts-container"></div>
+            </section>
+            
+            <!-- Recent Logs -->
+            <section class="section">
+                <h2>Recent Activity Logs</h2>
+                <div id="logs-container"></div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
